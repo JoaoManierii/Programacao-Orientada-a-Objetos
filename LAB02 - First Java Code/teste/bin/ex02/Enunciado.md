@@ -1,0 +1,9 @@
+#Exercício 02
+
+Criar classes em Java para:
+- Cadastrar Produtos (Código, nome, fabricante, preço)
+- Cadastrar Clientes (CPF, nome, data de nascimento, CEP)
+- Cadastrar Funcionários (CPF, nome, data de nascimento, data de ingresso)
+
+Crie um arquivo para cada classe. Crie um programa principal que faça uso
+das três classes por meio da instanciação de objetos da classe
