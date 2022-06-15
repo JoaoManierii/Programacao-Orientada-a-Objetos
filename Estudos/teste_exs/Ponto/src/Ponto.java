@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Ponto[] p = new Ponto[30];
+        Ponto []p = new Ponto[30];
         float []x = new float[30];
         float []y = new float[30];
 

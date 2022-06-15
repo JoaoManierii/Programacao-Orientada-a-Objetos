@@ -2,36 +2,45 @@ public class Ponto {
     public float x;
     public float y;
 
+    public Ponto(){
+    }
     public Ponto(float x, float y) {
         this.x = x;
         this.y = y;
     }
+    public void imprime_ponto(){
+        System.out.println("O ponto digitado é: (" + x + "," + y + ")");
+    }
+    public Ponto somaPontos(Ponto a, Ponto b){
+        float x1;
+        float y1;
 
-    public void imprime_ponto() {
-        System.out.println("O ponto digitado eh ("+x+","+y+")");
-    }
-    public Ponto soma_pontos(Ponto i, Ponto j) {
-        float x1, y1;
-        x1 = i.x + j.x;
-        y1 = i.x + j.y;
-        Ponto xt = new Ponto(x1,y1);
-        return xt;
-    }
-    public static void soma_pontos (Ponto i, Ponto j, Ponto k) {
-        float x1, y1;
-        x1 = i.x + j.x;
-        y1 = i.x + j.y;
-       // System.out.println("A soma de("+i.x+","+i.y+")com("+j.x+","+j.y+") eh("+k.x+","+k.y+")");
-        k.x = x1;
-        k.y = y1;
+        x1 = a.x + b.x;
+        y1 = a.y + b.y;
+        Ponto pf = new Ponto(x1,y1);
+        return pf;
     }
 
-    public static void cal_area (Ponto i, Ponto j, Ponto k) {
+    public static void somaPontos(Ponto a, Ponto b,Ponto c){
+        float x1;
+        float y1;
+
+        x1 = a.x + b.x;
+        y1 = a.y + b.y;
+        c.x = x1;
+        c.y = y1;
     }
 
-    public void multiplica_ponto (int z) {
-        x*=z;
-        y*=z;
+    public void calc_area(Ponto a, Ponto b){
+
+    }
+
+    public void mult_ponto(int c){
+        float a = this.x * c;
+        float b = this.y * y;
+        this.x = this.x * c;
+        this.x = this.y * y;
+
     }
 
     public void inc_dir(String cord){
@@ -67,6 +76,4 @@ public class Ponto {
             this.y++;
         }
     }
-
 }
-
