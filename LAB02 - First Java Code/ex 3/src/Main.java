@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Ponto[] p = new Ponto[30];
+        Ponto []p = new Ponto[30];
         float []x = new float[30];
         float []y = new float[30];
 
@@ -12,7 +12,7 @@ public class Main {
         int n = sc.nextInt();
         for(int i = 0; i<n; i++)
         {
-            System.out.println("Digite as coordenadas do ponto: ");
+            System.out.println("Digite as coordenadas do image.pngponto: ");
             x[i] = sc.nextFloat();
             y[i] = sc.nextFloat();
             p[i] = new Ponto(x[i],y[i]);
