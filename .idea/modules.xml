@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/LAB02 - First Java Code/LAB02 - First Java Code.iml" filepath="$PROJECT_DIR$/LAB02 - First Java Code/LAB02 - First Java Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estudos/teste_exs/Ponto/Ponto.iml" filepath="$PROJECT_DIR$/Estudos/teste_exs/Ponto/Ponto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estudos/teste_exs/conta_v0/conta_v0.iml" filepath="$PROJECT_DIR$/Estudos/teste_exs/conta_v0/conta_v0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LAB02 - First Java Code/ex 2/ex 2.iml" filepath="$PROJECT_DIR$/LAB02 - First Java Code/ex 2/ex 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LAB02 - First Java Code/ex 3/ex 3.iml" filepath="$PROJECT_DIR$/LAB02 - First Java Code/ex 3/ex 3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/poo1_t2_jotamanieri.iml" filepath="$PROJECT_DIR$/.idea/poo1_t2_jotamanieri.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estudos/teste_exs/pratica01/pratica01.iml" filepath="$PROJECT_DIR$/Estudos/teste_exs/pratica01/pratica01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estudos/teste_exs/untitled/untitled.iml" filepath="$PROJECT_DIR$/Estudos/teste_exs/untitled/untitled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estudos/teste_exs/untitled2/untitled2.iml" filepath="$PROJECT_DIR$/Estudos/teste_exs/untitled2/untitled2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estudos/teste_exs/untitled3/untitled3.iml" filepath="$PROJECT_DIR$/Estudos/teste_exs/untitled3/untitled3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estudos/teste_exs/untitled4/untitled4.iml" filepath="$PROJECT_DIR$/Estudos/teste_exs/untitled4/untitled4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Estudos/teste_exs/visibilidade/visibilidade.iml" filepath="$PROJECT_DIR$/Estudos/teste_exs/visibilidade/visibilidade.iml" />
+    </modules>
+  </component>
+</project>
