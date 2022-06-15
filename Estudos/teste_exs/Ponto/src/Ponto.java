@@ -12,7 +12,7 @@ public class Main {
         int n = sc.nextInt();
         for(int i = 0; i<n; i++)
         {
-            System.out.println("Digite as coordenadas do image.pngponto: ");
+            System.out.println("Digite as coordenadas do ponto: ");
             x[i] = sc.nextFloat();
             y[i] = sc.nextFloat();
             p[i] = new Ponto(x[i],y[i]);
