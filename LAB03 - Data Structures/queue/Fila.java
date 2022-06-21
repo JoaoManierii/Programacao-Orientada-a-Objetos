@@ -25,7 +25,7 @@ public class Fila {
     
     public void push(int num) 
     {
-        this.fila.add_valor(num);
+        this.fila.insert_sorted(num);
     }
     
     public int size() 

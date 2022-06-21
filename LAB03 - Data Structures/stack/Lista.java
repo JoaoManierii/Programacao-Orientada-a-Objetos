@@ -11,47 +11,46 @@ public class Lista {
     }
 
     public int getprimeiro() {
-        No primeiro = primeiro.getNext();
-        return primeiro.getNum();
+        No primeiro = this.primeiro.getnext();
+        return primeiro.getnumero();
     }
 
     public int getultimo() {
         
         
         
-        return this.ultimo.getNum();
+        return this.ultimo.getnumero();
     }
 
-
-    public void add_valor(int num) 
+    public void insert_sorted(int numero){   
         if(primeiro==null) 
         {
             primeiro = new No();
             ultimo = primeiro;
             No N = new No();
-            N.setNum(num);
-            N.setNext(null);
-            ultimo.setNext(N);
+            N.setnumero(numero);
+            N.setnext(null);
+            ultimo.setnext(N);
             ultimo = N;
             tam++;
         }
         else 
         {
             No N = new No();
-            N.setNum(num);
-            N.setNext(null);
-            ultimo.setNext(N);
+            N.setnumero(numero);
+            N.setnext(null);
+            ultimo.setnext(N);
             ultimo = N;
             tam++;
         }
     }
 
-    public void add_naPos(int pos, int num) 
+    public void insert_pos(int pos, int num) 
     {
         if(pos>this.tam) 
         {
             System.out.println("A Lista possui "+ this.tam + "Elementos");
-            add_valor(num);
+            insert_sorted(num);
             System.out.println("O tamanho da lista agora e "+ this.tam);
         }
         
@@ -60,8 +59,8 @@ public class Lista {
             No novo = new No(num);
             if(pos==1)
             {   
-                novo.setNext(primeiro.getNext());
-                primeiro.setNext(novo);
+                novo.setnext(primeiro.getnext());
+                primeiro.setnext(novo);
                 this.tam++;
             }
             else
@@ -74,34 +73,33 @@ public class Lista {
         else if(pos==1)
         {
             No novo = new No(num);
-            novo.setNext(primeiro.getNext());
-            primeiro.setNext(novo);
+            novo.setnext(primeiro.getnext());
+            primeiro.setnext(novo);
             this.tam++;
         }
 
         else if(pos>1) 
         {
-            No percorre = primeiro.getNext();
+            No percorre = primeiro.getnext();
             No Sentinela = primeiro;
             
             for(int i=1; i<size();i++)
                 if(i==pos)
                 {
                     No novo = new No(num);
-                    novo.setNext(Sentinela.getNext());
-                    Sentinela.setNext(novo);
+                    novo.setnext(Sentinela.getnext());
+                    Sentinela.setnext(novo);
                     tam++;
                     break;
                 }
                 else
                 {
-                    percorre = percorre.getNext();
-                    Sentinela = Sentinela.getNext();       
+                    percorre = percorre.getnext();
+                    Sentinela = Sentinela.getnext();       
                 }
         }
 }
     
-
     public void print() 
     {
         
@@ -111,19 +109,19 @@ public class Lista {
         
         else 
         {
-            No per = primeiro.getNext();
+            No per = primeiro.getnext();
         
             while(per != null)
             {
-                System.out.println(per.getNum());
-                per=per.getNext();
+                System.out.println(per.getnumero());
+                per=per.getnext();
             }
         }
     }
 
-    public void remove(int num) 
+    public void erase_num(int num) 
     {
-        No per = primeiro.getNext();
+        No per = primeiro.getnext();
         No Sent = primeiro;
         
         if(primeiro==null)  
@@ -131,35 +129,35 @@ public class Lista {
             
         else while(per != null) 
         {
-            if (per.getNum() == num) 
+            if (per.getnumero() == num) 
             {
-                if(per.getNext()==null) /
+                if(per.getnext()==null) 
                 {
                     ultimo=Sent;
-                    ultimo.setNext(null);
+                    ultimo.setnext(null);
                     per=null;
                     tam--;
                     break;
                 }
                 else 
                 {
-                    Sent.setNext(per.getNext());
-                    per.setNext(null);
+                    Sent.setnext(per.getnext());
+                    per.setnext(null);
                     per = null;
                     tam--;
                     break;
                 }
             }
-            per = per.getNext();
-            Sent = Sent.getNext();
+            per = per.getnext();
+            Sent = Sent.getnext();
             
         }
         System.gc();
     }
 
-    public void remove_pos(int pos) 
+    public void erase_pos(int pos) 
     {
-        No per = primeiro.getNext();
+        No per = primeiro.getnext();
         No Sent = primeiro;
         
         if(primeiro==null)  
@@ -172,13 +170,13 @@ public class Lista {
         {
             if(i==pos)
                 {
-                    Sent.setNext(per.getNext());
-                    per.setNext(null);
+                    Sent.setnext(per.getnext());
+                    per.setnext(null);
                     per = null;
                     break;
                 }
-            per = per.getNext();
-            Sent = Sent.getNext();
+            per = per.getnext();
+            Sent = Sent.getnext();
             
         }
         System.gc();
@@ -191,7 +189,7 @@ public class Lista {
 
     public void erase_data()
     {
-        No percorre = primeiro.getNext();
+        No percorre = primeiro.getnext();
         No Sentinela = primeiro;
         
         if(primeiro==null) 
@@ -199,10 +197,10 @@ public class Lista {
             
         else while(percorre != null) 
         {
-            Sentinela.setNext(null);
+            Sentinela.setnext(null);
             Sentinela = null;
             Sentinela = percorre;
-            percorre = percorre.getNext();
+            percorre = percorre.getnext();
         }
         this.primeiro=null;
         this.ultimo=primeiro;
@@ -211,7 +209,7 @@ public class Lista {
     
     public void push_front(int num) 
     {
-        No per = primeiro.getNext();
+        No per = primeiro.getnext();
         No Sent = primeiro;
         
         if(primeiro==null)
@@ -219,33 +217,33 @@ public class Lista {
             
         else while(per != null) 
         {
-            if (per.getNum() == num) 
+            if (per.getnumero() == num) 
             {
-                if(per.getNext()==null) 
+                if(per.getnext()==null) 
                 {
                     ultimo=Sent;
-                    ultimo.setNext(null);
-                    per.setNext(primeiro.getNext());
-                    primeiro.setNext(per);
+                    ultimo.setnext(null);
+                    per.setnext(primeiro.getnext());
+                    primeiro.setnext(per);
                     break;
                 }
                 else 
                 {
                     ultimo=Sent;
-                    ultimo.setNext(per.getNext());
-                    per.setNext(primeiro.getNext());
-                    primeiro.setNext(per);
+                    ultimo.setnext(per.getnext());
+                    per.setnext(primeiro.getnext());
+                    primeiro.setnext(per);
                     break;
                 }
             }
-            per = per.getNext();
-            Sent = Sent.getNext();
+            per = per.getnext();
+            Sent = Sent.getnext();
         }
     }
     
     public void push_back(int num) 
     {
-        No per = primeiro.getNext();
+        No per = primeiro.getnext();
         No Sent = primeiro;
         
         if(primeiro==null)  
@@ -253,7 +251,7 @@ public class Lista {
         
         else if (this.tam==1)
             {
-                if(primeiro.getNum()==num)
+                if(primeiro.getnumero()==num)
                 {
                     System.out.println("O elemento eh o unico na lista. ");
                 }
@@ -263,24 +261,24 @@ public class Lista {
             
         else while(per != null) 
         {
-            if (per.getNum() == num) 
+            if (per.getnumero() == num) 
             {
-                if(per.getNext()==null) 
+                if(per.getnext()==null) 
                 {
                     System.out.println("Nenhuma alteracao foi feita, o elemente e o ultimo da lista. ");
                     break;
                 }
                 else 
                 {
-                    primeiro.setNext(per.getNext());
-                    ultimo.setNext(per);
-                    per.setNext(null);
+                    primeiro.setnext(per.getnext());
+                    ultimo.setnext(per);
+                    per.setnext(null);
                     ultimo=per;
                     break;
                 }
             }
-            per = per.getNext();
-            Sent = Sent.getNext();
+            per = per.getnext();
+            Sent = Sent.getnext();
         }
     }
 
@@ -292,17 +290,17 @@ public class Lista {
         }
         else 
         {
-            No percorre = primeiro.getNext();
-            if(percorre.getNext()==null) 
+            No percorre = primeiro.getnext();
+            if(percorre.getnext()==null) 
             {
-                this.primeiro.setNext(null);
+                this.primeiro.setnext(null);
                 this.ultimo=primeiro;
                 this.tam--;
             }
             else 
             {
-                primeiro.setNext(percorre.getNext());
-                percorre.setNext(null);
+                primeiro.setnext(percorre.getnext());
+                percorre.setnext(null);
                 percorre=null;
                 this.tam--;
             }
@@ -318,10 +316,10 @@ public class Lista {
         }
         else
         {
-            No percorre = primeiro.getNext();
-            if(percorre.getNext()==null)
+            No percorre = primeiro.getnext();
+            if(percorre.getnext()==null)
             {
-                this.primeiro.setNext(null);
+                this.primeiro.setnext(null);
                 this.ultimo=primeiro;
                 this.tam--;
             }
@@ -334,14 +332,14 @@ public class Lista {
                     temp--;
                     if(temp==0)
                     {
-                        sentinela.setNext(null);
+                        sentinela.setnext(null);
                         ultimo=sentinela;
                         percorre=null;
                         this.tam--;
                         break;
                     }
-                    percorre = percorre.getNext();
-                    sentinela = sentinela.getNext();
+                    percorre = percorre.getnext();
+                    sentinela = sentinela.getnext();
                     
                 }
 
@@ -357,11 +355,11 @@ public class Lista {
         }
         else
         {
-            No percorre = primeiro.getNext();
+            No percorre = primeiro.getnext();
             for(int i =0;i<size();i++)
-            {    if(percorre.getNum()==num)
+            {    if(percorre.getnumero()==num)
                     return i+1;
-                percorre=percorre.getNext();
+                percorre=percorre.getnext();
             }
         }
         System.out.println("Valor não encontrado ");
@@ -376,12 +374,12 @@ public class Lista {
         }
         else
         {
-            No percorre = primeiro.getNext();
+            No percorre = primeiro.getnext();
             for(int i =1;i<size();i++)
             {
                 if(i==pos)
-                    return percorre.getNum();
-                percorre=percorre.getNext();
+                    return percorre.getnumero();
+                percorre=percorre.getnext();
             }
         }
         System.out.println("Valor não encontrado");

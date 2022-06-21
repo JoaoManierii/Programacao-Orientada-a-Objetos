@@ -18,7 +18,7 @@ public class Stack {
     
     public void push(int num) 
     {
-        this.stack.add_naPos(1, num);
+        this.stack.insert_pos(1, num);
     }
     public int size() 
     {
