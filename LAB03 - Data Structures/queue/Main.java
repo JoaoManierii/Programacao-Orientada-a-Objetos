@@ -37,7 +37,7 @@ public class Main
     public static void Lista()
     {
         System.out.println("Testes Iniciados");
-        ListaDin L01 = new ListaDin();
+        Lista L01 = new Lista();
 
         System.out.println("Lista criada");
 
