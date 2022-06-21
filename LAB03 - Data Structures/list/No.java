@@ -9,12 +9,12 @@ public class No {
     public No(int numero)
     {
         this.numero=numero;
-        this.next=null;
+        next=null;
     }
     
     public int getnumero()
     {
-        return this.numero;
+        return numero;
     }
 
     public void setnumero(int numero)
@@ -23,7 +23,7 @@ public class No {
     }
     public No getnext()
     {
-        return this.next;
+        return next;
     }
     public void setnext(No next)
     {
