@@ -6,6 +6,7 @@ public class Main
             Stack pilha = new Stack();
     
         
+            int qtd=0;
             for(int i =0;i<qtd;i++){
             pilha.push(i+1);
     
