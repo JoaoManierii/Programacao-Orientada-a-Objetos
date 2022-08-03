@@ -1,6 +1,9 @@
 public class Ponto {
     public float x;
     public float y;
+    // check:<<<erro: sem especificação de modifier (private)>>>>
+    // check:<<<erro: sem get/set>>>>
+
 
     public Ponto(){
     }
