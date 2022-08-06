@@ -7,7 +7,7 @@ public class Main {
         Ponto []p = new Ponto[30];
         float []x = new float[30];
         float []y = new float[30];
-
+ 
         System.out.println("Digite quantos pontos deseja criar:");
         int n = sc.nextInt();
         for(int i = 0; i<n; i++)
@@ -28,13 +28,13 @@ public class Main {
         int p2;
         p2 = sc.nextInt();
         Circulo pCirculo;
-        pCirculo = p[p2].perimetro(p[p2]);
+        pCirculo = p[p2].perimetro(p[p2]);// check:<<<erro:?? >>>>
         Circulo.perimetro();
         System.out.println("O perimetro eh: "+this.perimetro());
 
         sc.close();
 
-
+// check:<<<erro: faltou o vetor de círculos e a busca pelo menor>>>>
 
 
     }
